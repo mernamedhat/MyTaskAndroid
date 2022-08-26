@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_last_step"
+        android:gravity="center"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_login_and_signup_for_a_n_free_account_to_continue"
+        android:gravity="center"
+        android:textSize="@dimen/_13ssp"
+        android:padding="@dimen/_5sdp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/input_layout_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:drawableStart="#fff"
+                    android:drawablePadding="130dp"
+                    android:id="@+id/input_phone"
+                    android:maxLength="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:hint="mobile"
+                    android:textSize="@dimen/_13sdp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.hbb20.CountryCodePicker
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/ccpp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:onClick="onCountryPickerClick"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We will use this to verfiy you account"
+        android:layout_margin="@dimen/_10sdp"
+        android:textColor="#5464b4"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="I agree and I comply to the"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_11ssp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="community guidelines"
+            android:layout_marginStart="@dimen/_5sdp"
+           android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textColor="#5464b4"
+            android:textStyle="bold"
+            android:textSize="@dimen/_11ssp"
+            />
+
+
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:text="continue"
+
+        android:background="@drawable/background"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>

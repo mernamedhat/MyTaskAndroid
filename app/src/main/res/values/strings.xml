@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyTask</string>
+    <string name="please_login_and_signup_for_a_n_free_account_to_continue">Please Login and signUp for a\n Free account to continue</string>
+    <string name="open_last_step">Open Last step</string>
+</resources>
